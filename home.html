@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home · MEDIAHUB</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar in Malay -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="home.html" class="brand"><span class="logo"></span>MEDIAHUB</a>
+      <div class="navlinks">
+        <a href="equipment.html">Peralatan</a>
+        <a href="rooms.html">Bilik TECC</a>
+        <a href="about.html">Tentang Kami</a>
+        <a href="backend/login.php">Log Masuk</a>
+        <a class="btn" href="backend/register.php">Daftar</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+
+<section class="hero">
+  <div>
+    <div class="kicker">Selamat Datang</div>
+    <h1>Sewa peralatan & tempah bilik—tanpa tempahan berganda.</h1>
+    <p>Versi ini menambah dua kategori yang anda minta: <strong>Peralatan</strong> (kamera, pembesar suara, walkie talkie, mikrofon) dan <strong>Bilik</strong> (tecc1, tecc2, tecc3). Logik sisi klien menghalang tempahan yang bertindih untuk item/bilik dan tarikh yang sama.</p>
+    <p>
+      <a class="btn" href="equipment.html">Sewa peralatan</a>
+      &nbsp;&nbsp;<a href="rooms.html">Tempah bilik</a>
+    </p>
+  </div>
+  <div class="card">
+    <div class="thumb" style="background:linear-gradient(135deg,#0ea5e9,#22d3ee)"></div>
+    <div class="body">
+      <span class="badge">Baru</span>
+      <p><a class="btn" href="rooms.html">Cuba bilik</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="kicker">Pautan Pantas</div>
+  <div class="card-grid">
+
+    <!-- Card 1 - Peralatan -->
+    <a class="card" href="equipment.html">
+      <div class="thumb">
+        <img src="myequipment.jpg" alt="Peralatan" class="thumb-img">
+      </div>
+      <div class="body">
+        <h3>Peralatan</h3>
+        <div class="meta">Kamera, Pembesar Suara, Walkie talkie, Mikrofon</div>
+      </div>
+    </a>
+
+    <!-- Card 2 - Tempahan Saya -->
+    <a class="card" href="my-bookings.html">
+      <div class="thumb">
+        <img src="tempahangemini.png" alt="Tempahan Saya" class="thumb-img">
+      </div>
+      <div class="body">
+        <h3>Tempahan Saya</h3>
+        <div class="meta">Lihat / Batal permohonan</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+  </main>
+  <footer class="container section">
+    <div class="meta">© 2025 MEDIAHUB</div>
+  </footer>
+</body>
+</html>

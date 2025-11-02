@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book · RentEasy</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="home.html" class="brand"><span class="logo"></span> RentEasy</a>
+      <div class="navlinks">
+        <a href="equipment.html">Equipment</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="about.html">About</a>
+        <a href="backend/login.php">Login</a>
+        <a class="btn" href="backend/register.php">Sign up</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+
+<section class="section" id="booking-section" data-page="book">
+  <div class="kicker">Booking</div>
+  <h2 id="resourceTitle">Book</h2>
+  <p class="meta" id="resourceMeta">Choose date and times. Conflicts for the same resource and date are blocked.</p>
+
+  <div class="grid-2">
+    <form id="bookingForm">
+      <input type="hidden" name="type" id="type">
+      <input type="hidden" name="id" id="id">
+      <div class="form-row">
+        <div>
+          <label>Date</label>
+          <input type="date" id="date" required>
+        </div>
+        <div>
+          <label>Guests / Units</label>
+          <input type="number" id="qty" min="1" value="1" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label>Start time</label>
+          <input type="time" id="start" required>
+        </div>
+        <div>
+          <label>End time</label>
+          <input type="time" id="end" required>
+        </div>
+      </div>
+      <label>Full name</label>
+      <input id="name" placeholder="Your name" required>
+      <label>Contact</label>
+      <input id="contact" placeholder="+60..." required>
+      <button class="btn" type="submit">Save booking</button>
+      <div id="formMsg" class="alert" style="margin-top:12px; display:none"></div>
+    </form>
+
+    <aside class="card">
+      <div class="body">
+        <h3>Existing bookings for this resource</h3>
+        <p class="meta">Stored in your browser (localStorage). Use a real backend for multi-user.</p>
+        <table class="table" id="bookingsTable">
+          <thead>
+            <tr><th>Date</th><th>Time</th><th>Name</th><th>Qty</th><th></th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p><a href="my-bookings.html">View all my bookings</a></p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+  </main>
+  <footer class="container section">
+    <div class="meta">© 2025 RentEasy · Demo UI (HTML, CSS + small JS for conflict checks)</div>
+  </footer>
+</body>
+</html>

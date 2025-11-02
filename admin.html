@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin · RentEasy</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="home.html" class="brand"><span class="logo"></span> RentEasy</a>
+      <div class="navlinks">
+        <a href="equipment.html">Equipment</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="about.html">About</a>
+        <a href="backend/login.php">Login</a>
+        <a class="btn" href="backend/register.php">Sign up</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+
+<header class="section">
+  <div class="kicker">Admin</div>
+  <h2>Dashboard</h2>
+  <p class="meta">Static overview. For real usage, back this with a database.</p>
+</header>
+<section class="section">
+  <div class="grid-2">
+    <div class="card">
+      <div class="body">
+        <h3>Equipment</h3>
+        <table class="table">
+          <tr><th>Item</th><th>Rate</th><th>Status</th></tr>
+          <tr><td>Kamera</td><td>RM80/day</td><td>Active</td></tr>
+          <tr><td>Loud Speaker</td><td>RM120/day</td><td>Active</td></tr>
+          <tr><td>Walkie Talkie</td><td>RM30/day</td><td>Active</td></tr>
+          <tr><td>Mikrofon</td><td>RM25/day</td><td>Active</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="body">
+        <h3>Rooms</h3>
+        <table class="table">
+          <tr><th>Room</th><th>Capacity</th><th>Status</th></tr>
+          <tr><td>TECC1</td><td>12</td><td>Active</td></tr>
+          <tr><td>TECC2</td><td>8</td><td>Active</td></tr>
+          <tr><td>TECC3</td><td>20</td><td>Active</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+  <footer class="container section">
+    <div class="meta">© 2025 RentEasy · Demo UI (HTML, CSS + small JS for conflict checks)</div>
+  </footer>
+</body>
+</html>

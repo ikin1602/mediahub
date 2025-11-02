@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rooms · RentEasy</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="home.html" class="brand"><span class="logo"></span> RentEasy</a>
+      <div class="navlinks">
+        <a href="equipment.html">Equipment</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="about.html">About</a>
+        <a href="backend/login.php">Login</a>
+        <a class="btn" href="backend/register.php">Sign up</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+
+<header class="section">
+  <div class="kicker">Rooms</div>
+  <h2>Book rooms</h2>
+  <p class="meta">TECC rooms with time-based slots. Overlapping bookings for the same room and date are blocked.</p>
+</header>
+<section class="card-grid">
+  <a class="card" href="backend/book.php?slug=tecc1">
+    <div class="thumb" style="background:linear-gradient(135deg,#1e293b,#22c55e)"></div>
+    <div class="body">
+      <h3>TECC1</h3>
+      <div class="meta">Projector · 12 pax · RM0/hour</div>
+      <span class="badge">Available</span>
+    </div>
+  </a>
+  <a class="card" href="backend/book.php?slug=tecc2">
+    <div class="thumb" style="background:linear-gradient(135deg,#1e293b,#f59e0b)"></div>
+    <div class="body">
+      <h3>TECC2</h3>
+      <div class="meta">Whiteboard · 8 pax · RM0/hour</div>
+      <span class="badge">Available</span>
+    </div>
+  </a>
+  <a class="card" href="backend/book.php?slug=tecc3">
+    <div class="thumb" style="background:linear-gradient(135deg,#1e293b,#a78bfa)"></div>
+    <div class="body">
+      <h3>TECC3</h3>
+      <div class="meta">Conference · 20 pax · RM0/hour</div>
+      <span class="badge">Available</span>
+    </div>
+  </a>
+</section>
+
+  </main>
+  <footer class="container section">
+    <div class="meta">© 2025 RentEasy · Demo UI (HTML, CSS + small JS for conflict checks)</div>
+  </footer>
+</body>
+</html>
