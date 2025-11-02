@@ -1,0 +1,186 @@
+:root{
+  --bg:#0b1020;
+  --card:#121932;
+  --muted:#8892b0;
+  --accent:#4fd1c5;
+  --accent-2:#a78bfa;
+  --text:#e6edf3;
+  --navbar-height: 64px; /* height of your sticky nav */
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1080px;margin:0 auto;padding:24px}
+
+/* Sticky nav – keep modest z-index; modal will sit far above it */
+.nav{
+  position:sticky; top:0;
+  background:rgba(11,16,32,.85);
+  backdrop-filter: blur(8px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  z-index:100; /* keep low; modal overlay will be 2147483000 */
+}
+.nav-inner{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:14px 24px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.4px}
+.brand .logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:inline-block}
+.navlinks{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1020;padding:10px 14px;border-radius:10px;font-weight:600;border:0;cursor:pointer}
+.btn:hover{opacity:.95;text-decoration:none;transform:translateY(-1px)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 24px}
+.hero h1{font-size:40px;line-height:1.15;margin:0}
+.hero p{color:var(--muted)}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,0.06);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.card .thumb{height:150px;background:linear-gradient(135deg,#1e293b,#0ea5e9);opacity:.9}
+.card .body{padding:16px;display:flex;flex-direction:column;gap:8px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(79,209,197,.14);border:1px solid rgba(79,209,197,.35);color:#9ff1ea;border-radius:999px;padding:6px 10px;font-size:12px}
+.meta{color:var(--muted);font-size:14px}
+.section{padding:24px}
+footer{border-top:1px solid rgba(255,255,255,0.06);margin-top:36px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+form{display:grid;gap:14px}
+input,select,textarea{background:#0c142a;color:var(--text);border:1px solid rgba(255,255,255,0.08);padding:12px;border-radius:10px;width:100%}
+label{font-weight:600}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:12px;border-bottom:1px solid rgba(255,255,255,0.08);text-align:left}
+.kicker{letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-size:12px}
+.alert{padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.08);background:#0e172f;color:#b3e6ff}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+}
+
+/* ===== Admin Bookings – Dark Polished UI ===== */
+.section .card{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:14px;
+  box-shadow:0 2px 10px rgba(0,0,0,.25);
+}
+.section .card .body{padding:16px 18px}
+
+/* Pending toolbar */
+.admin-toolbar{
+  margin-top:12px;
+  border:1px solid rgba(79,209,197,.35);
+  background:linear-gradient(180deg, rgba(79,209,197,.12), rgba(167,139,250,.08));
+  border-radius:12px;
+}
+.admin-toolbar .body{
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  padding:12px 14px;
+}
+.admin-toolbar .count{display:inline-flex; align-items:center; gap:8px; font-weight:700; color:var(--text)}
+.admin-toolbar .dot{
+  width:8px; height:8px; border-radius:50%;
+  background:#fb923c; box-shadow:0 0 0 3px rgba(251,146,60,.25);
+}
+
+/* Buttons */
+.btn{transition:transform .02s ease, box-shadow .2s ease, opacity .2s ease}
+.btn:active{transform:translateY(1px)}
+.btn-outline{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.16)}
+.btn-outline:hover{background:rgba(255,255,255,.06)}
+.btn-primary{background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:#0b1020;border:0}
+.btn-primary:hover{box-shadow:0 6px 16px rgba(59,130,246,.35)}
+.btn-success{background:linear-gradient(135deg,#10b981,#22d3ee);color:#0b1020;border:0}
+.btn-success:hover{box-shadow:0 6px 16px rgba(16,185,129,.35)}
+.btn-danger{background:linear-gradient(135deg,#ef4444,#f97316);color:#0b1020;border:0}
+.btn-danger:hover{box-shadow:0 6px 16px rgba(239,68,68,.35)}
+.btn-warn{background:linear-gradient(135deg,#f59e0b,#f43f5e);color:#0b1020;border:0}
+
+/* Filters row */
+.form-row{
+  background:rgba(255,255,255,.02);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;
+  padding:10px;
+  box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+/* Table polish */
+.table{border-collapse:separate;border-spacing:0;overflow:hidden}
+.table th{
+  position:sticky; top:0; z-index:1;
+  background:#0e1630; color:#cdd6f4; font-weight:700;
+  padding:12px 10px; border-bottom:1px solid rgba(255,255,255,.08);
+}
+.table tbody td{padding:12px 10px; border-bottom:1px solid rgba(255,255,255,.06)}
+.table tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+.table tbody tr:hover{background:rgba(79,209,197,.08)}
+
+/* Status badges */
+.badge{display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700; letter-spacing:.3px; border:1px solid transparent; line-height:1}
+.badge .dot{width:6px; height:6px; border-radius:50%}
+.badge-pending{color:#fbbf24;background:rgba(251,191,36,.12);border-color:rgba(251,191,36,.35)}
+.badge-pending .dot{background:#fbbf24}
+.badge-approved{color:#34d399;background:rgba(52,211,153,.12);border-color:rgba(52,211,153,.35)}
+.badge-approved .dot{background:#34d399}
+.badge-checked{color:#38bdf8;background:rgba(56,189,248,.12);border-color:rgba(56,189,248,.35)}
+.badge-checked .dot{background:#38bdf8}
+.badge-returned{color:#cbd5e1;background:rgba(203,213,225,.08);border-color:rgba(203,213,225,.28)}
+.badge-returned .dot{background:#cbd5e1}
+.badge-rejected{color:#f87171;background:rgba(248,113,113,.12);border-color:rgba(248,113,113,.35)}
+.badge-rejected .dot{background:#f87171}
+.badge-cancelled{color:#a78bfa;background:rgba(167,139,250,.12);border-color:rgba(167,139,250,.35)}
+
+/* Actions row */
+.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.actions .btn{min-height:36px;padding:8px 12px;font-size:14px}
+.actions .btn svg{display:block}
+
+/* Card image support */
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.card:hover .thumb img{transform:scale(1.05)}
+
+/* ====== ACTION BUTTONS (compact style) ====== */
+.action-btn{padding:4px 10px;border:none;border-radius:6px;font-size:12px;font-weight:500;cursor:pointer;transition:background .2s ease, transform .1s ease;color:#fff}
+.action-btn:active{transform:scale(0.96)}
+.action-approve{background:#22c55e}
+.action-approve:hover{background:#16a34a}
+.action-reject{background:#ef4444}
+.action-reject:hover{background:#dc2626}
+.action-return{background:#0ea5e9}
+.action-return:hover{background:#0369a1}
+.action-cancel{background:#f59e0b}
+.action-cancel:hover{background:#d97706}
+.status-row{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+
+/* ===== MODAL (ALWAYS ABOVE NAV) ===== */
+/* Add this to <body> when modal is open to prevent background scroll */
+body.modal-open{overflow:hidden}
+
+/* Full-screen dark overlay behind the modal */
+.modal-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  /* make sure it's above ANYTHING on the page */
+  z-index: 2147483000; /* top layer */
+  display: flex;
+  align-items: flex-start;      /* start near top */
+  justify-content: center;
+  padding: calc(var(--navbar-height) + 20px) 16px 24px; /* keep below sticky nav */
+}
+
+/* The modal panel */
+.modal{
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  width: min(920px, 100%);
+  max-height: calc(100vh - (var(--navbar-height) + 60px));
+  overflow: auto;              /* scroll inside the modal if content is long */
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
+  position: relative;          /* for any internal sticky elements */
+  z-index: 1;                  /* above overlay background */
+}
+
+/* Modal body spacing so the top border doesn’t touch text */
+.modal .body{padding:18px 20px}
+
+/* Sticky table header inside modal */
+.modal .table th{position:sticky; top:0; z-index:2}
+
